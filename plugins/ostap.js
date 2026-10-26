@@ -554,7 +554,10 @@
     function start() {
         injectStyles();
 
-        if (window.Lampa && Lampa.Listener) {
+        if (window.appready) {
+            initBranding();
+            loadBuiltinPlugins();
+        } else if (window.Lampa && Lampa.Listener) {
             Lampa.Listener.follow('app', function (e) {
                 if (e.type === 'ready') {
                     initBranding();
