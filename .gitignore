@@ -1,0 +1,8 @@
+.agent/
+.agents/
+.claude/
+.gemini/
+.DS_Store
+Thumbs.db
+*.log
+__pycache__/

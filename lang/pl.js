@@ -315,7 +315,7 @@ export default {
     torrent_error_info_4:  'Antywirus lub zapora sieciowa mogą blokować połączenie. Spróbuj je tymczasowo wyłączyć.',
     torrent_error_info_5:  'Na innym urządzeniu w tej samej sieci otwórz w przeglądarce adres {ip} i sprawdź, czy interfejs TorrServer jest dostępny.',
     torrent_error_info_6:  'Jeśli problem nadal występuje, spróbuj ponownie uruchomić TorrServer oraz kartę sieciową.',
-    torrent_error_info_7:  'Jeśli problem nie ustąpił, napisz do grupy Telegram @lampa_group z wiadomością',
+    torrent_error_info_7:  'Jeśli problem nie ustąpił, napisz do grupy Telegram @ostaptv_group z wiadomością',
     torrent_error_start:  'Rozpocznij sprawdzanie',
     torrent_error_nomatrix:  'Nie udało się potwierdzić wersji Matrix',
     torrent_error_made:  'Wykonano',
@@ -1271,7 +1271,7 @@ export default {
     termsofuse_t_12:  'W razie naruszeń skontaktuj się z twórcami...',
     termsofuse_t_13:  'Zgłoś problem właścicielowi treści...',
 
-    install_app_apk_title:  'Jak zainstalować Lampa na Androidzie',
+    install_app_apk_title:  'Jak zainstalować OSTAP TV na Androidzie',
     install_app_apk_text:  'Zalecamy instalację APK dla stabilności...',
     install_app_apk_qr:  'Zeskanuj QR, aby pobrać APK',
 

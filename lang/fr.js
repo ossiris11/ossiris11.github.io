@@ -232,7 +232,7 @@ export default {
     torent_nohash_do_one: 'Vérifiez la configuration de Jackett',
     torent_nohash_do_two: 'Les sources privées peuvent ne pas fournir de lien direct',
     torent_nohash_do_three: 'Vérifiez si Jackett peut télécharger le fichier',
-    torent_nohash_do_four: 'Contactez notre groupe Telegram : @lampa_group',
+    torent_nohash_do_four: 'Contactez notre groupe Telegram : @ostaptv_group',
     torent_nohash_do_five: 'Précisez le film et envoyez une photo de la distribution si possible',
 
     torrent_error_text: 'Impossible de se connecter à TorrServer. Vérifions ensemble les problèmes courants.',
@@ -248,7 +248,7 @@ export default {
     torrent_error_info_4: 'Le pare-feu ou l\'antivirus peut bloquer l\'accès. Essayez de les désactiver temporairement.',
     torrent_error_info_5: 'Ouvrez {ip} dans un navigateur sur un autre appareil du même réseau pour tester l\'interface web.',
     torrent_error_info_6: 'Redémarrez TorrServer et votre routeur si l\'erreur persiste.',
-    torrent_error_info_7: 'Contactez le groupe Telegram @lampa_group avec le message : (Lampa ne se connecte pas à TorrServer, adresse : {ip})',
+    torrent_error_info_7: 'Contactez le groupe Telegram @ostaptv_group avec le message : (Lampa ne se connecte pas à TorrServer, adresse : {ip})',
     torrent_error_start: 'Démarrer la vérification',
     torrent_error_nomatrix: 'Échec de la vérification de la version Matrix',
     torrent_error_made: 'Effectué',
@@ -1096,8 +1096,8 @@ export default {
     termsofuse_t_13: 'Lampa retirera tout contenu sur notification valide de violation de droits d\'auteur.',
     settings_rest_protocol_use: 'Connexion sécurisée',
     settings_rest_protocol_descr: 'Utiliser HTTPS',
-    install_app_apk_title: 'Installer Lampa sur Android',
-    install_app_apk_text: 'Nous recommandons l\'installation via APK pour plus de stabilité. Instructions sur @lampa_group.',
+    install_app_apk_title: 'Installer OSTAP TV sur Android',
+    install_app_apk_text: 'Nous recommandons l\'installation via APK pour plus de stabilité. Instructions sur @ostaptv_group.',
     install_app_apk_qr: 'Scannez pour télécharger l\'APK',
     copy_link_buffer: 'Copier le lien',
 

@@ -231,7 +231,7 @@ export default {
     torent_nohash_do_one: 'Проверете дали сте настроили Jackett коректно',
     torent_nohash_do_two: 'Частни източници може да не предоставят връзка към файлът',
     torent_nohash_do_three: 'Уверете се, че Jackett може да сваля файлът също',
-    torent_nohash_do_four: 'Пишете в нашата група в Телеграм: @lampa_group',
+    torent_nohash_do_four: 'Пишете в нашата група в Телеграм: @ostaptv_group',
     torent_nohash_do_five: 'Посочете кой филм, кое издание и по възможност снимка на това издание',
 
     torrent_error_text: 'Пропадна връзката към TorrServer. Нека набързо минем през списък с възможните проблеми и да проверим всичко.',
@@ -247,7 +247,7 @@ export default {
     torrent_error_info_4: 'Често срещано явление, антивирусната програма или защитната стена могат да блокират достъпа по IP адрес, опитайте да деактивирате антивирусната програма и защитната стена.',
     torrent_error_info_5: 'На друго устройство, в същата мрежа, отворете {ip} адреса в браузър и проверете дали уеб интерфейсът TorrServer е наличен.',
     torrent_error_info_6: 'Ако след всички проверки все още възниква грешка при свързване, опитайте да рестартирате TorrServer и интернет адаптера.',
-    torrent_error_info_7: 'Ако проблемът продължава, пишете на групата на Telegram @lampa_group с текста (Lampa не се свързва с TorrServer след всички проверки, текущият адрес е {ip})',
+    torrent_error_info_7: 'Ако проблемът продължава, пишете на групата на Telegram @ostaptv_group с текста (Lampa не се свързва с TorrServer след всички проверки, текущият адрес е {ip})',
     torrent_error_start: 'Стартирайте проверката',
     torrent_error_nomatrix: 'Неуспешна проверка на версията на Matrix',
     torrent_error_made: 'Извършено',
@@ -1097,8 +1097,8 @@ export default {
 
     settings_rest_protocol_use: 'Сигурна връзка',
     settings_rest_protocol_descr: 'Използвайте HTTPS протокол',
-    install_app_apk_title: 'Как да инсталирате Lampa на Android',
-    install_app_apk_text: 'Забелязахме, че използвате MediaStationX, за да стартирате Lampa на Android. Препоръчваме да инсталирате Lampa като APK приложение. Това ще осигури по-стабилна работа и достъп до всички функции на приложението. <br><br>Отидете в Telegram групата <span class="account-modal__site">@lampa_group</span>, за да изтеглите най-новия APK файл и инструкции за инсталиране.',
+    install_app_apk_title: 'Как да инсталирате OSTAP TV на Android',
+    install_app_apk_text: 'Забелязахме, че използвате MediaStationX, за да стартирате OSTAP TV на Android. Препоръчваме да инсталирате OSTAP TV като APK приложение. Това ще осигури по-стабилна работа и достъп до всички функции на приложението. <br><br>Отидете в Telegram групата <span class="account-modal__site">@ostaptv_group</span>, за да изтеглите най-новия APK файл и инструкции за инсталиране.',
     install_app_apk_qr: 'Сканирайте QR кода, за да изтеглите APK файла на Lampa',
     copy_link_buffer: 'Копиране на връзката',
 

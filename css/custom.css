@@ -1,0 +1,1290 @@
+/* ==========================================================================
+   OSTAP-TV: GOLDEN CINEMA DESIGN SYSTEM
+   Премиальная тема оформления для Smart TV и Media Station X
+   Цветовая палитра:
+   - Основной фон: #090A0D
+   - Вторичный фон: #171A20
+   - Акцентное золото: #D8B46A (Champagne Gold)
+   - Светлое золото: #F3D079
+   - Темное золото: #9E7D3B
+   - Основной текст: #F5F5F3
+   - Второстепенный текст: #A9ABB3
+   ========================================================================== */
+
+:root {
+    --ostap-bg: #090A0D;
+    --ostap-bg-sec: #171A20;
+    --ostap-gold: #D8B46A;
+    --ostap-gold-light: #F3D079;
+    --ostap-gold-dark: #9E7D3B;
+    --ostap-gold-glow: rgba(216, 180, 106, 0.38);
+    --ostap-text: #F5F5F3;
+    --ostap-text-sec: #A9ABB3;
+    --ostap-radius-card: 1em;
+    --ostap-radius-btn: 0.8em;
+    --ostap-gold-gradient: linear-gradient(135deg, #F3D079 0%, #D8B46A 50%, #9E7D3B 100%);
+    --ostap-gold-gradient-soft: linear-gradient(135deg, rgba(243, 208, 121, 0.2) 0%, rgba(216, 180, 106, 0.08) 100%);
+
+    /* Fluid Apple & Emil Kowalski motion tokens */
+    --ostap-ease: cubic-bezier(0.16, 1, 0.3, 1);
+    --ostap-ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+    --ostap-duration-fast: 120ms;
+    --ostap-duration-normal: 220ms;
+    --ostap-duration-slow: 300ms;
+}
+
+/* 1. ГЛОБАЛЬНЫЙ ФОН И ТЕЛО */
+body, html {
+    background-color: var(--ostap-bg) !important;
+    color: var(--ostap-text) !important;
+    font-family: -apple-system, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+}
+
+#app {
+    background-color: var(--ostap-bg) !important;
+}
+
+/* Шелковистый скроллинг списков и каруселей без задержек */
+.scroll__body {
+    transition: transform 0.25s var(--ostap-ease) !important;
+}
+
+/* 2. КИНЕМАТОГРАФИЧЕСКИЙ БЭКДРОП (ФОНОВЫЙ БАННЕР) */
+.background__fade {
+    background: radial-gradient(circle at 75% 25%, rgba(9, 10, 13, 0.25) 0%, rgba(9, 10, 13, 0.8) 60%, #090A0D 100%),
+                linear-gradient(0deg, #090A0D 15%, rgba(9, 10, 13, 0.85) 45%, transparent 85%) !important;
+    opacity: 1 !important;
+}
+
+.background__one, .background__two {
+    filter: brightness(0.7) contrast(1.1) !important;
+    transition: opacity 0.5s var(--ostap-ease) !important;
+}
+
+/* 3. ВЕРХНЯЯ НАВИГАЦИОННАЯ ПАНЕЛЬ (HEADER) */
+.head {
+    background: linear-gradient(180deg, rgba(9, 10, 13, 0.95) 0%, rgba(9, 10, 13, 0.6) 75%, transparent 100%) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border-bottom: 1px solid rgba(216, 180, 106, 0.1) !important;
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+}
+
+.head__logo-icon {
+    width: 2.8em !important;
+    height: 2.8em !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.head__logo-icon img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    filter: drop-shadow(0 0 12px rgba(216, 180, 106, 0.5)) !important;
+}
+
+.head__title {
+    font-size: 1.55em !important;
+    font-weight: 700 !important;
+    color: var(--ostap-text) !important;
+    letter-spacing: 0.04em !important;
+    text-transform: uppercase !important;
+}
+
+.head__action.focus, .head__action.hover {
+    color: var(--ostap-gold) !important;
+    transform: scale3d(1.1, 1.1, 1) !important;
+}
+
+.head__action.focus svg, .head__action.hover svg {
+    fill: var(--ostap-gold) !important;
+    filter: drop-shadow(0 0 10px var(--ostap-gold-glow)) !important;
+}
+
+/* 4. БОКОВОЕ МЕНЮ (SIDEBAR) */
+.menu {
+    background-color: rgba(9, 10, 13, 0.97) !important;
+    border-right: 1px solid rgba(216, 180, 106, 0.15) !important;
+    backdrop-filter: blur(25px) !important;
+    -webkit-backdrop-filter: blur(25px) !important;
+}
+
+.menu__item {
+    color: var(--ostap-text-sec) !important;
+    border-radius: var(--ostap-radius-btn) !important;
+    margin: 0.3em 0.8em !important;
+    border-left: 3px solid transparent !important;
+    transition: transform 0.2s var(--ostap-ease), background 0.18s ease-out, border-color 0.18s ease-out, color 0.18s ease-out !important;
+}
+
+.menu__item.focus {
+    background: var(--ostap-gold-gradient-soft) !important;
+    color: var(--ostap-text) !important;
+    border-left-color: var(--ostap-gold) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6) !important;
+    transform: scale3d(1.02, 1.02, 1) !important;
+}
+
+.menu__item:active {
+    transform: scale3d(0.98, 0.98, 1) !important;
+    transition: transform 0.08s ease-out !important;
+}
+
+.menu__item.focus .menu__ico svg {
+    fill: var(--ostap-gold) !important;
+    filter: drop-shadow(0 0 8px var(--ostap-gold-glow)) !important;
+}
+
+.shikimori-local-menu-item.focus .menu__ico svg {
+    stroke: var(--ostap-gold) !important;
+    fill: none !important;
+    filter: drop-shadow(0 0 8px var(--ostap-gold-glow)) !important;
+}
+
+.menu__text {
+    font-weight: 600 !important;
+    font-size: 1.15em !important;
+}
+
+/* Очистка бокового меню: скрытие дублирующегося аниме и лишних кнопок */
+.menu__item[data-action="anime"],
+.menu__item[data-action="filter"],
+.menu__item[data-action="relise"],
+.menu__item[data-action="subscribes"],
+.menu__item[data-action="timetable"],
+.menu__item[data-action="mytorrents"],
+.menu__item[data-action="myperson"],
+.menu__item[data-action="catalog"],
+.menu__item[data-action="about"],
+.menu__item[data-action="console"] {
+    display: none !important;
+}
+
+/* Стилизация ТВ Каналов в меню */
+.menu__item[data-action="iptv_channels"].focus .menu__ico svg {
+    stroke: var(--ostap-gold) !important;
+    fill: none !important;
+    filter: drop-shadow(0 0 8px var(--ostap-gold-glow)) !important;
+}
+
+/* 5. КАРТОЧКИ ФИЛЬМОВ, СЕРИАЛОВ И АНИМЕ */
+.items-line__title {
+    color: var(--ostap-text) !important;
+    font-size: 1.65em !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.03em !important;
+    margin-left: 0.5em !important;
+    margin-bottom: 0.6em !important;
+}
+
+.card {
+    transition: transform 0.24s var(--ostap-ease) !important;
+}
+
+.card .card__view {
+    background-color: var(--ostap-bg-sec) !important;
+    border-radius: var(--ostap-radius-card) !important;
+    border: 1px solid rgba(216, 180, 106, 0.1) !important;
+    overflow: hidden !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6) !important;
+    transition: transform 0.22s var(--ostap-ease), border-color 0.18s ease-out, box-shadow 0.22s var(--ostap-ease) !important;
+}
+
+.card .card__img {
+    border-radius: var(--ostap-radius-card) !important;
+    transition: transform 0.26s var(--ostap-ease), filter 0.2s ease-out !important;
+}
+
+/* Активное состояние карточки при выборе пультом */
+.card.focus {
+    z-index: 15 !important;
+}
+
+.card.focus .card__view {
+    transform: scale3d(1.07, 1.07, 1) !important;
+    border: 2px solid var(--ostap-gold) !important;
+    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.95), 0 0 30px var(--ostap-gold-glow) !important;
+    will-change: transform;
+}
+
+.card.focus .card__img {
+    transform: scale3d(1.03, 1.03, 1) !important;
+    filter: brightness(1.08) contrast(1.04) !important;
+}
+
+/* Тактильный отклик при нажатии на карточку */
+.card.focus:active .card__view,
+.card:active .card__view {
+    transform: scale3d(0.98, 0.98, 1) !important;
+    transition: transform 0.09s ease-out !important;
+}
+
+.card.focus .card__view::after {
+    display: none !important; /* Чистый рендеринг без наложения псевдоэлементов */
+}
+
+.card__title {
+    color: var(--ostap-text-sec) !important;
+    font-size: 1.05em !important;
+    font-weight: 500 !important;
+    margin-top: 0.4em !important;
+    transition: color 0.2s ease !important;
+}
+
+.card.focus .card__title {
+    color: var(--ostap-text) !important;
+    font-weight: 700 !important;
+    text-shadow: 0 0 12px var(--ostap-gold-glow) !important;
+}
+
+.card__age {
+    background-color: rgba(9, 10, 13, 0.85) !important;
+    color: var(--ostap-gold) !important;
+    border: 1px solid rgba(216, 180, 106, 0.35) !important;
+    border-radius: 0.4em !important;
+    font-weight: 700 !important;
+}
+
+.card__vote {
+    background: var(--ostap-gold-gradient) !important;
+    color: #090A0D !important;
+    font-weight: 800 !important;
+    border-radius: 0.4em !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* 6. ИНДИКАТОР ПРОГРЕССА ПРОСМОТРА */
+.card-watched {
+    height: 4px !important;
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    border-radius: 2px !important;
+}
+
+.card-watched > div {
+    background: var(--ostap-gold-gradient) !important;
+    box-shadow: 0 0 10px var(--ostap-gold) !important;
+    border-radius: 2px !important;
+}
+
+/* 7. КНОПКИ ДЕЙСТВИЙ (ОНЛАЙН, ТОРРЕНТЫ, ТРЕЙЛЕР) */
+.full-start__button, .simple-button {
+    background-color: var(--ostap-bg-sec) !important;
+    color: var(--ostap-text) !important;
+    border: 1px solid rgba(216, 180, 106, 0.25) !important;
+    border-radius: var(--ostap-radius-btn) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5) !important;
+    transition: transform 0.18s var(--ostap-ease), background 0.18s ease-out, border-color 0.18s ease-out, box-shadow 0.18s var(--ostap-ease) !important;
+}
+
+.full-start__button.focus, .simple-button.selector.focus {
+    background: var(--ostap-gold-gradient) !important;
+    color: #090A0D !important;
+    border-color: var(--ostap-gold-light) !important;
+    box-shadow: 0 0 28px var(--ostap-gold-glow), 0 8px 25px rgba(0, 0, 0, 0.8) !important;
+    transform: scale3d(1.05, 1.05, 1) !important;
+    font-weight: 700 !important;
+}
+
+/* Тактильный отклик при нажатии на кнопки */
+.full-start__button:active, .simple-button:active, .button:active {
+    transform: scale3d(0.96, 0.96, 1) !important;
+    transition: transform 0.08s ease-out !important;
+}
+
+.full-start__button.focus > svg {
+    fill: #090A0D !important;
+}
+
+/* Специальное оформление кнопок Смотреть и Трейлеры на карточке фильма */
+.full-start-new__buttons .button--play {
+    background: rgba(23, 26, 32, 0.9) !important;
+    border: 1.5px solid var(--ostap-gold) !important;
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+    transition: transform 0.18s var(--ostap-ease), background 0.18s ease-out, border-color 0.18s ease-out, box-shadow 0.18s var(--ostap-ease) !important;
+}
+
+.full-start-new__buttons .button--play svg {
+    fill: var(--ostap-gold) !important;
+}
+
+.full-start-new__buttons .button--play.focus {
+    background: var(--ostap-gold-gradient) !important;
+    color: #090A0D !important;
+    border-color: var(--ostap-gold-light) !important;
+    box-shadow: 0 0 30px var(--ostap-gold-glow), 0 8px 25px rgba(0, 0, 0, 0.9) !important;
+    transform: scale3d(1.06, 1.06, 1) !important;
+}
+
+.full-start-new__buttons .button--play.focus svg {
+    fill: #090A0D !important;
+}
+
+.full-start-new__buttons .view--trailer {
+    display: inline-flex !important;
+    align-items: center !important;
+    background: rgba(23, 26, 32, 0.8) !important;
+    border: 1px solid rgba(216, 180, 106, 0.35) !important;
+    color: var(--ostap-text) !important;
+    transition: transform 0.18s var(--ostap-ease), background 0.18s ease-out, border-color 0.18s ease-out, box-shadow 0.18s var(--ostap-ease) !important;
+}
+
+.full-start-new__buttons .view--trailer svg {
+    width: 1.4em !important;
+    height: 1.4em !important;
+    fill: var(--ostap-gold) !important;
+}
+
+.full-start-new__buttons .view--trailer.focus {
+    background: var(--ostap-gold-gradient) !important;
+    color: #090A0D !important;
+    border-color: var(--ostap-gold-light) !important;
+    box-shadow: 0 0 28px var(--ostap-gold-glow), 0 8px 25px rgba(0, 0, 0, 0.8) !important;
+    transform: scale3d(1.06, 1.06, 1) !important;
+    font-weight: 700 !important;
+}
+
+.full-start-new__buttons .view--trailer.focus svg {
+    fill: #090A0D !important;
+}
+
+.full-start-new__buttons .button--play span,
+.full-start-new__buttons .view--trailer span {
+    display: inline-block !important;
+    margin-left: 0.6em !important;
+    font-size: 0.95em !important;
+    letter-spacing: 0.02em !important;
+}
+
+/* 8. ЭКРАН ПОДРОБНОСТЕЙ О ФИЛЬМЕ (FULL VIEW) */
+.full-start-new__title {
+    color: var(--ostap-text) !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.02em !important;
+}
+
+.full-start-new__tagline {
+    color: var(--ostap-gold) !important;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+.full-start-new__details {
+    color: var(--ostap-text-sec) !important;
+}
+
+.full-descr__text {
+    color: var(--ostap-text) !important;
+    line-height: 1.6 !important;
+    font-size: 1.15em !important;
+}
+
+/* Плашки рейтингов */
+.rate--kp {
+    background: linear-gradient(135deg, #ff6600, #e05500) !important;
+    color: #fff !important;
+    font-weight: 800 !important;
+    border-radius: 0.4em !important;
+    box-shadow: 0 2px 10px rgba(255, 102, 0, 0.3) !important;
+}
+
+.rate--imdb {
+    background: var(--ostap-gold-gradient) !important;
+    color: #090A0D !important;
+    font-weight: 800 !important;
+    border-radius: 0.4em !important;
+    box-shadow: 0 2px 10px var(--ostap-gold-glow) !important;
+}
+
+/* 9. ЭКРАН ПОИСКА И КЛАВИАТУРА */
+.search-box {
+    background-color: var(--ostap-bg-sec) !important;
+    border: 1px solid rgba(216, 180, 106, 0.25) !important;
+    border-radius: var(--ostap-radius-btn) !important;
+}
+
+.search-box__input {
+    color: var(--ostap-text) !important;
+}
+
+.keypad__button.focus {
+    background: var(--ostap-gold-gradient) !important;
+    color: #090A0D !important;
+    font-weight: 700 !important;
+    box-shadow: 0 0 16px var(--ostap-gold-glow) !important;
+    border-radius: 0.5em !important;
+}
+
+/* 10. МОДАЛЬНЫЕ ОКНА И НАСТРОЙКИ */
+.modal__content {
+    background-color: var(--ostap-bg-sec) !important;
+    border: 1px solid rgba(216, 180, 106, 0.25) !important;
+    border-radius: 1.2em !important;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9), 0 0 35px rgba(216, 180, 106, 0.15) !important;
+}
+
+.settings-param.focus {
+    background: var(--ostap-gold-gradient-soft) !important;
+    border-left: 3px solid var(--ostap-gold) !important;
+    color: var(--ostap-text) !important;
+}
+
+/* 11. ЭКРАН ПРЕДЗАГРУЗКИ (SPLASH SCREEN) */
+.welcome {
+    background: #090A0D url(../img/welcome.jpg) no-repeat 50% 50% !important;
+    background-size: contain !important;
+    background-color: #090A0D !important;
+}
+
+/* Скроллбары */
+.scrollbar-rail-y {
+    background: transparent !important;
+}
+
+.scrollbar-rail-y .scrollbar-thumb-y {
+    background: rgba(216, 180, 106, 0.3) !important;
+    border-radius: 4px !important;
+}
+
+/* 12. ПОЛНОЕ УДАЛЕНИЕ УПОМИНАНИЙ CUB, CUB PREMIUM, АККАУНТОВ И БАННЕРА ЛЕНТЫ */
+.feed-head,
+.cub-premium,
+.modal--cub-premium,
+.account-modal-split,
+.account-modal-split__qr,
+.settings-folder[data-component="account"],
+.open--profile,
+.ad-server,
+[class*="cub-premium"],
+.account-modal__status,
+.account-modal__premium,
+.account-modal__sync,
+.account-modal,
+.full-start__button[data-action="cub"],
+.settings-param[data-name="account"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+/* 13. КНОПКА ТОРРЕНТЫ И СКРЫТИЕ СЛУЖЕБНЫХ НАДПИСЕЙ */
+.full-start__button.view--torrent {
+    display: inline-flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+[data-section="diagnostics"],
+.shikimori-local__section[data-section="diagnostics"],
+.diagnostics-page {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.view--online_mod .full-start__button-subtitle,
+.view--online_mod[data-subtitle]::after {
+    display: none !important;
+}
+
+/* 14. ПЕРЕНОС КНОПКИ ПОИСКА В НИЖНИЙ ПРАВЫЙ УГОЛ */
+.explorer__files-head .filter--search,
+.torrent-list .filter--search,
+.filter .filter--search {
+    position: fixed !important;
+    right: 2.5vw !important;
+    bottom: 3vh !important;
+    z-index: 99 !important;
+    margin: 0 !important;
+    padding: 0.65em 0.9em !important;
+    background: rgba(23, 26, 32, 0.85) !important;
+    border: 1px solid rgba(216, 180, 106, 0.25) !important;
+    border-radius: 50px !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    transition: opacity 0.2s ease-out, transform 0.2s var(--ostap-ease), border-color 0.2s ease-out, box-shadow 0.2s var(--ostap-ease) !important;
+}
+
+.explorer__files-head .filter--search:active,
+.torrent-list .filter--search:active,
+.filter .filter--search:active {
+    transform: scale3d(0.96, 0.96, 1) !important;
+    transition: transform 0.08s ease-out !important;
+}
+
+.explorer__files-head .filter--search.focus,
+.torrent-list .filter--search.focus,
+.filter .filter--search.focus,
+.filter .filter--search:hover {
+    opacity: 1 !important;
+    transform: scale3d(1.08, 1.08, 1) !important;
+    background: var(--ostap-gold-gradient) !important;
+    border-color: var(--ostap-gold-light) !important;
+    box-shadow: 0 0 25px var(--ostap-gold-glow), 0 8px 20px rgba(0, 0, 0, 0.8) !important;
+}
+
+.explorer__files-head .filter--search.focus svg,
+.filter .filter--search.focus svg {
+    fill: #090A0D !important;
+}
+
+.filter .filter--search > div {
+    font-size: 0.85em !important;
+    max-width: 140px !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    margin-left: 0.5em !important;
+    opacity: 0.8 !important;
+}
+
+
+
+
+/* ==========================================================================
+   15. ПОИСК: ЦЕНТРИРОВАНИЕ ПОИСКОВОЙ СТРОКИ И СКРЫТИЕ ВКЛАДОК ИСТОЧНИКОВ
+   ========================================================================== */
+
+/* Полное скрытие вкладок источников (TMDB, CUB и т.д.) */
+.search__sources,
+.search-source,
+.search-source__tab,
+.search-source__count,
+[data-area="sources"] {
+    display: none !important;
+}
+
+/* Центрирование контейнера поиска */
+.search .scroll__body {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+}
+
+.search__body {
+    width: 100% !important;
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+/* 1. Режим встроенной клавиатуры: Центрированное поле ввода */
+.search__input {
+    margin: 1.5vh auto 1.5vh auto !important;
+    max-width: 660px !important;
+    width: 85% !important;
+    text-align: center !important;
+    padding: 0.65em 1.2em !important;
+    background: rgba(23, 26, 32, 0.9) !important;
+    border: 1.5px solid rgba(216, 180, 106, 0.35) !important;
+    border-radius: 16px !important;
+    font-size: 1.8em !important;
+    font-weight: 500 !important;
+    color: #F5F5F3 !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.05) !important;
+    transition: border-color 0.18s ease-out, box-shadow 0.2s var(--ostap-ease), transform 0.2s var(--ostap-ease) !important;
+    letter-spacing: 0.03em !important;
+}
+
+.search__input.filled {
+    border-color: #D8B46A !important;
+    box-shadow: 0 0 30px rgba(216, 180, 106, 0.4), 0 8px 30px rgba(0, 0, 0, 0.8) !important;
+}
+
+.search__input.filled::after {
+    border-right: 0.15em solid #D8B46A !important;
+}
+
+/* 2. Режим Системной клавиатуры (Smart TV / MSX / Browser): Центрированная строка ввода */
+body.system--keyboard .search__keypad,
+.search__keypad:has(.simple-keyboard-input) {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 1.5vh auto 1.5vh auto !important;
+    max-width: 660px !important;
+    width: 85% !important;
+    padding: 0 !important;
+}
+
+body.system--keyboard .simple-keyboard,
+.search__keypad .simple-keyboard:has(.simple-keyboard-input) {
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    background: rgba(23, 26, 32, 0.9) !important;
+    border: 1.5px solid rgba(216, 180, 106, 0.35) !important;
+    border-radius: 16px !important;
+    padding: 0.65em 1.2em !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.05) !important;
+    transition: border-color 0.18s ease-out, box-shadow 0.2s var(--ostap-ease), transform 0.2s var(--ostap-ease) !important;
+}
+
+.search__keypad .simple-keyboard-input {
+    width: 100% !important;
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    font-size: 1.8em !important;
+    text-align: center !important;
+    color: #F5F5F3 !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.03em !important;
+}
+
+.search__keypad .simple-keyboard-input::placeholder {
+    color: rgba(245, 245, 243, 0.45) !important;
+    text-align: center !important;
+}
+
+/* Фокус на поисковой строке при наведении пультом */
+.search__keypad .simple-keyboard-input.focus,
+body.system--keyboard .simple-keyboard.focus,
+body.system--keyboard .simple-keyboard:focus-within {
+    border-color: #D8B46A !important;
+    box-shadow: 0 0 35px rgba(216, 180, 106, 0.45), 0 8px 30px rgba(0, 0, 0, 0.8) !important;
+    transform: scale3d(1.02, 1.02, 1) !important;
+}
+
+/* Кнопка микрофона в поисковой строке */
+.search__keypad .simple-keyboard-mic {
+    margin-left: 0.8em !important;
+    color: #D8B46A !important;
+    cursor: pointer !important;
+    padding: 0.3em 0.5em !important;
+    border-radius: 8px !important;
+    transition: transform 0.18s var(--ostap-ease), background 0.15s ease-out, color 0.15s ease-out !important;
+}
+
+.search__keypad .simple-keyboard-mic.focus,
+.search__keypad .simple-keyboard-mic:hover {
+    background: rgba(216, 180, 106, 0.2) !important;
+    color: #F3D079 !important;
+    transform: scale(1.1) !important;
+}
+
+.search__keypad .simple-keyboard-mic:active {
+    transform: scale(0.96) !important;
+    transition: transform 0.08s ease-out !important;
+}
+
+/* 3. Центрирование встроенной экранной клавиатуры */
+body:not(.system--keyboard) .search__keypad {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin: 0 auto 1.5vh auto !important;
+}
+
+body:not(.system--keyboard) .search__keypad .simple-keyboard {
+    max-width: 820px !important;
+    width: 95% !important;
+    background: rgba(19, 21, 27, 0.85) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border: 1px solid rgba(216, 180, 106, 0.25) !important;
+    border-radius: 18px !important;
+    padding: 1.2em !important;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7) !important;
+}
+
+.simple-keyboard .hg-button {
+    background: rgba(255, 255, 255, 0.06) !important;
+    color: #F5F5F3 !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    border: 1px solid transparent !important;
+    transition: transform 0.08s ease-out, background 0.08s ease-out, border-color 0.08s ease-out !important;
+}
+
+.simple-keyboard .hg-button.focus,
+.simple-keyboard .hg-button:hover {
+    background: var(--ostap-gold-gradient) !important;
+    color: #090A0D !important;
+    border-color: var(--ostap-gold-light) !important;
+    box-shadow: 0 0 15px var(--ostap-gold-glow) !important;
+    transform: scale(1.08) !important;
+}
+
+.simple-keyboard .hg-button:active {
+    transform: scale(0.92) !important;
+    transition: transform 0.05s ease-out !important;
+}
+
+/* 4. Центрирование истории поисковых запросов */
+.search__history {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 850px !important;
+    margin: 0.5vh auto 1.5vh auto !important;
+}
+
+.search__history .scroll__body {
+    display: flex !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 0.6em !important;
+}
+
+.search-history-key {
+    background: rgba(23, 26, 32, 0.75) !important;
+    border: 1px solid rgba(216, 180, 106, 0.2) !important;
+    border-radius: 20px !important;
+    padding: 0.4em 1em !important;
+    color: rgba(245, 245, 243, 0.85) !important;
+    font-size: 0.95em !important;
+    transition: transform 0.18s var(--ostap-ease), background 0.18s ease-out, border-color 0.18s ease-out !important;
+}
+
+.search-history-key:active {
+    transform: scale3d(0.96, 0.96, 1) !important;
+    transition: transform 0.08s ease-out !important;
+}
+
+.search-history-key.focus,
+.search-history-key:hover {
+    background: var(--ostap-gold-gradient) !important;
+    color: #090A0D !important;
+    border-color: var(--ostap-gold-light) !important;
+    box-shadow: 0 0 15px var(--ostap-gold-glow) !important;
+    transform: scale(1.06) !important;
+}
+
+.search-history-empty {
+    text-align: center !important;
+    font-size: 1.1em !important;
+    color: rgba(245, 245, 243, 0.4) !important;
+    margin: 0 auto !important;
+}
+
+/* 5. Результаты поиска */
+.search__results {
+    width: 100% !important;
+    margin-top: 1vh !important;
+}
+
+/* ==========================================================================
+   16. ОКНО ПРОСМОТРА: КИНОТЕАТРАЛЬНЫЙ ЭКРАН С 3 КНОПКАМИ ВЫБОРА
+   ========================================================================== */
+
+/* Скрываем старые элементы Explorer при открытии online_mod */
+.activity--online_mod .explorer__left,
+.activity--online_mod .explorer__files-head,
+.activity--online_mod .explorer__files,
+.activity--online_mod .head-backward {
+    display: none !important;
+}
+
+.activity--online_mod .explorer {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: #090A0D !important;
+}
+
+/* Полноэкранный фон афиши */
+.ostap-cinema-overlay {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 10 !important;
+    overflow: hidden !important;
+}
+
+.ostap-cinema-backdrop {
+    position: absolute !important;
+    inset: 0 !important;
+    background-size: cover !important;
+    background-position: center 25% !important;
+    background-repeat: no-repeat !important;
+    transform: scale(1.04) !important;
+    filter: brightness(0.68) contrast(1.1) !important;
+}
+
+/* Кинематографичное затемнение и виньетка */
+.ostap-cinema-vignette {
+    position: absolute !important;
+    inset: 0 !important;
+    background: radial-gradient(circle at center, rgba(9, 10, 13, 0.45) 0%, rgba(9, 10, 13, 0.88) 75%, #090A0D 100%),
+                linear-gradient(to top, rgba(9, 10, 13, 0.95) 0%, rgba(9, 10, 13, 0.3) 50%, rgba(9, 10, 13, 0.85) 100%) !important;
+}
+
+/* Центральный блок управления */
+.ostap-cinema-center {
+    position: relative !important;
+    z-index: 20 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    max-width: 920px !important;
+    width: 90% !important;
+    padding: 2em !important;
+    animation: ostapCinemaFadeIn 0.26s var(--ostap-ease) both !important;
+}
+
+@keyframes ostapCinemaFadeIn {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 16px, 0) scale(0.97);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+}
+
+.ostap-cinema__meta-top {
+    font-size: 1.25em !important;
+    color: var(--ostap-gold-light) !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.05em !important;
+    margin-bottom: 0.6em !important;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.95) !important;
+}
+
+.ostap-cinema__title {
+    font-size: 3.4em !important;
+    font-weight: 800 !important;
+    color: #F5F5F3 !important;
+    line-height: 1.15 !important;
+    margin: 0 0 0.9em 0 !important;
+    letter-spacing: -0.01em !important;
+    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.95) !important;
+    max-width: 850px !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+}
+
+/* Ряд из 3 кнопок выбора */
+.ostap-cinema__buttons {
+    display: flex !important;
+    align-items: stretch !important;
+    justify-content: center !important;
+    gap: 1.2em !important;
+    width: 100% !important;
+    margin-bottom: 2.2em !important;
+}
+
+/* Кнопка выбора: Источник, Озвучка, Сезон и Серия */
+.ostap-cinema__btn {
+    flex: 1 !important;
+    min-width: 200px !important;
+    max-width: 270px !important;
+    background: rgba(23, 26, 32, 0.88) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border: 1.5px solid rgba(216, 180, 106, 0.3) !important;
+    border-radius: 16px !important;
+    padding: 0.9em 1.2em !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6) !important;
+    transition: transform 0.2s var(--ostap-ease), background 0.18s ease-out, border-color 0.18s ease-out, box-shadow 0.2s var(--ostap-ease) !important;
+}
+
+.ostap-cinema__btn:active {
+    transform: scale3d(0.96, 0.96, 1) !important;
+    transition: transform 0.08s ease-out !important;
+}
+
+.ostap-btn__label {
+    font-size: 0.8em !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.08em !important;
+    color: rgba(245, 245, 243, 0.55) !important;
+    margin-bottom: 0.4em !important;
+    font-weight: 600 !important;
+}
+
+.ostap-btn__val {
+    font-size: 1.2em !important;
+    font-weight: 700 !important;
+    color: #F5F5F3 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    max-width: 100% !important;
+}
+
+/* Фокус на кнопках выбора при наведении пультом */
+.ostap-cinema__btn.focus,
+.ostap-cinema__btn:hover {
+    transform: scale3d(1.08, 1.08, 1) !important;
+    background: rgba(35, 39, 48, 0.95) !important;
+    border-color: var(--ostap-gold) !important;
+    box-shadow: 0 0 35px var(--ostap-gold-glow), 0 12px 35px rgba(0, 0, 0, 0.85) !important;
+}
+
+.ostap-cinema__btn.focus .ostap-btn__label,
+.ostap-cinema__btn:hover .ostap-btn__label {
+    color: var(--ostap-gold-light) !important;
+}
+
+.ostap-cinema__btn.focus .ostap-btn__val,
+.ostap-cinema__btn:hover .ostap-btn__val {
+    color: #FFFFFF !important;
+}
+
+/* Большая золотая кнопка Смотреть */
+.ostap-cinema__play {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.7em !important;
+    background: var(--ostap-gold-gradient) !important;
+    color: #090A0D !important;
+    padding: 0.85em 3em !important;
+    border-radius: 50px !important;
+    font-size: 1.5em !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.04em !important;
+    cursor: pointer !important;
+    box-shadow: 0 8px 30px var(--ostap-gold-glow), 0 12px 40px rgba(0, 0, 0, 0.9) !important;
+    transition: transform 0.22s var(--ostap-ease), box-shadow 0.22s var(--ostap-ease), filter 0.2s ease-out !important;
+    border: 1px solid var(--ostap-gold-light) !important;
+}
+
+.ostap-cinema__play:active {
+    transform: scale3d(1.02, 1.02, 1) !important;
+    transition: transform 0.08s ease-out !important;
+}
+
+.ostap-cinema__play svg {
+    width: 1.3em !important;
+    height: 1.3em !important;
+    fill: #090A0D !important;
+}
+
+.ostap-cinema__play.focus,
+.ostap-cinema__play:hover {
+    transform: scale3d(1.12, 1.12, 1) !important;
+    box-shadow: 0 0 45px rgba(243, 208, 121, 0.75), 0 16px 50px rgba(0, 0, 0, 0.95) !important;
+    filter: brightness(1.1) !important;
+}
+
+/* ==========================================================================
+   ПАНЕЛЬ УПРАВЛЕНИЯ ПЛЕЕРОМ (КНОПКИ ПРЕДЫДУЩЕЙ И СЛЕДУЮЩЕЙ СЕРИИ)
+   ========================================================================== */
+
+.player-panel__center {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 1.2em !important;
+}
+
+/* Fallback для ТВ без поддержки gap во flexbox */
+.player-panel__center > .button + .button {
+    margin-left: 0.8em;
+}
+
+.player-panel__prev,
+.player-panel__next {
+    width: 3.2em !important;
+    height: 3.2em !important;
+    border-radius: 50% !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(216, 180, 106, 0.22) !important;
+    color: #F5F5F3 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5) !important;
+    transition: transform 0.2s var(--ostap-ease), background 0.18s ease-out, border-color 0.18s ease-out, box-shadow 0.2s var(--ostap-ease) !important;
+    flex-shrink: 0 !important;
+}
+
+.player-panel__prev:active,
+.player-panel__next:active {
+    transform: scale3d(0.96, 0.96, 1) !important;
+    transition: transform 0.08s ease-out !important;
+}
+
+.player-panel__prev svg,
+.player-panel__next svg {
+    width: 1.25em !important;
+    height: 1.25em !important;
+    fill: currentColor !important;
+}
+
+/* Скрытое состояние */
+.player-panel__prev.hide,
+.player-panel__next.hide {
+    display: none !important;
+}
+
+/* Фокус на кнопках предыдущей и следующей серии */
+.player-panel__prev.focus,
+.player-panel__prev:hover,
+.player-panel__next.focus,
+.player-panel__next:hover {
+    background: var(--ostap-gold-gradient) !important;
+    color: #090A0D !important;
+    border-color: var(--ostap-gold-light) !important;
+    transform: scale3d(1.15, 1.15, 1) !important;
+    box-shadow: 0 0 28px var(--ostap-gold-glow), 0 8px 25px rgba(0, 0, 0, 0.8) !important;
+}
+
+.player-panel__prev.focus svg,
+.player-panel__prev:hover svg,
+.player-panel__next.focus svg,
+.player-panel__next:hover svg {
+    fill: #090A0D !important;
+}
+
+/* Центральная кнопка паузы / воспроизведения */
+.player-panel__playpause {
+    margin: 0 !important;
+    transition: transform 0.22s var(--ostap-ease), box-shadow 0.22s var(--ostap-ease), background 0.18s ease-out, border-color 0.18s ease-out !important;
+}
+
+.player-panel__playpause:active {
+    transform: scale3d(1.05, 1.05, 1) !important;
+    transition: transform 0.08s ease-out !important;
+}
+
+.player-panel__playpause:not(.focus) {
+    background: rgba(255, 255, 255, 0.12) !important;
+    border: 1px solid rgba(216, 180, 106, 0.3) !important;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.55) !important;
+}
+
+.player-panel__playpause.focus,
+.player-panel__playpause:hover {
+    background: var(--ostap-gold-gradient) !important;
+    color: #090A0D !important;
+    border-color: var(--ostap-gold-light) !important;
+    transform: scale3d(1.18, 1.18, 1) !important;
+    box-shadow: 0 0 35px var(--ostap-gold-glow), 0 10px 30px rgba(0, 0, 0, 0.85) !important;
+}
+
+.player-panel__playpause.focus svg,
+.player-panel__playpause:hover svg {
+    fill: #090A0D !important;
+}
+
+/* Премиальные тултипы для кнопок плеера */
+.player-panel .button .tooltip {
+    background: rgba(15, 17, 23, 0.95) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(216, 180, 106, 0.3) !important;
+    border-radius: 0.6em !important;
+    color: #F5F5F3 !important;
+    font-size: 0.95em !important;
+    font-weight: 600 !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.75) !important;
+    margin-top: 0.6em !important;
+    z-index: 100 !important;
+}
+
+/* ==========================================================================
+   16. SHIKIMORI: КИНЕМАТОГРАФИЧНОЕ ПРЕМИУМ-ОФОРМЛЕНИЕ ДЛЯ АНИМЕ
+   ========================================================================== */
+
+/* Карточка подробностей аниме */
+.shikimori-local.anime-detail {
+    background: radial-gradient(circle at 75% 25%, rgba(216, 180, 106, 0.08) 0%, rgba(9, 10, 13, 0.75) 55%, #090A0D 100%) !important;
+    border: 1px solid rgba(216, 180, 106, 0.15) !important;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    animation: ostapCinemaFadeIn 0.28s var(--ostap-ease) both !important;
+}
+
+/* 3D-постер аниме с золотистой подсветкой */
+.shikimori-local__poster {
+    border-radius: 18px !important;
+    border: 1.5px solid rgba(216, 180, 106, 0.28) !important;
+    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.9), 0 0 25px rgba(216, 180, 106, 0.2) !important;
+    transition: transform 0.24s var(--ostap-ease), box-shadow 0.24s var(--ostap-ease) !important;
+}
+
+/* Кнопки действий на странице аниме (Добавить в список, Оценить, Эпизоды, Найти в OSTAP TV) */
+.shikimori-local__action {
+    background: rgba(23, 26, 32, 0.88) !important;
+    color: var(--ostap-text) !important;
+    border: 1.2px solid rgba(216, 180, 106, 0.3) !important;
+    border-radius: 50px !important;
+    padding: 0.6em 1.4em !important;
+    font-weight: 600 !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5) !important;
+    transition: transform 0.18s var(--ostap-ease), background 0.18s ease-out, border-color 0.18s ease-out, box-shadow 0.18s var(--ostap-ease) !important;
+}
+
+.shikimori-local__action.primary {
+    background: var(--ostap-gold-gradient) !important;
+    color: #090A0D !important;
+    border-color: var(--ostap-gold-light) !important;
+    font-weight: 700 !important;
+}
+
+.shikimori-local__action.focus,
+.shikimori-local__action:hover {
+    background: var(--ostap-gold-gradient) !important;
+    color: #090A0D !important;
+    border-color: var(--ostap-gold-light) !important;
+    box-shadow: 0 0 28px var(--ostap-gold-glow), 0 8px 25px rgba(0, 0, 0, 0.85) !important;
+    transform: scale3d(1.06, 1.06, 1) !important;
+    outline: none !important;
+}
+
+.shikimori-local__action:active {
+    transform: scale3d(0.96, 0.96, 1) !important;
+    transition: transform 0.08s ease-out !important;
+}
+
+/* Вкладки Shikimori */
+.shikimori-local__tab {
+    background: rgba(23, 26, 32, 0.8) !important;
+    border: 1px solid rgba(216, 180, 106, 0.2) !important;
+    border-radius: 12px !important;
+    transition: transform 0.18s var(--ostap-ease), background 0.18s ease-out, border-color 0.18s ease-out, box-shadow 0.18s var(--ostap-ease) !important;
+}
+
+.shikimori-local__tab.focus,
+.shikimori-local__tab:hover {
+    background: var(--ostap-gold-gradient) !important;
+    color: #090A0D !important;
+    border-color: var(--ostap-gold-light) !important;
+    box-shadow: 0 0 24px var(--ostap-gold-glow) !important;
+    transform: scale3d(1.04, 1.04, 1) !important;
+    outline: none !important;
+}
+
+/* Выпадающие меню выбора статуса и оценки */
+.shikimori-local__dropdown {
+    background: rgba(18, 20, 26, 0.96) !important;
+    backdrop-filter: blur(25px) !important;
+    -webkit-backdrop-filter: blur(25px) !important;
+    border: 1.5px solid rgba(216, 180, 106, 0.3) !important;
+    border-radius: 16px !important;
+    box-shadow: 0 16px 50px rgba(0, 0, 0, 0.95), 0 0 30px rgba(216, 180, 106, 0.18) !important;
+    animation: ostapSlideUp 0.2s var(--ostap-ease) both !important;
+}
+
+.shikimori-local__dropdown-item {
+    border-radius: 10px !important;
+    color: var(--ostap-text) !important;
+    transition: transform 0.16s var(--ostap-ease), background 0.16s ease-out !important;
+}
+
+.shikimori-local__dropdown-item.focus {
+    background: var(--ostap-gold-gradient) !important;
+    color: #090A0D !important;
+    transform: scale3d(1.03, 1.03, 1) !important;
+    outline: none !important;
+}
+
+/* ==========================================================================
+   17. ШЕЛКОВИСТЫЕ ПЕРЕХОДЫ МОДАЛЬНЫХ ОКОН И ЭКРАНОВ
+   ========================================================================== */
+
+@keyframes ostapSlideUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 25px, 0) scale(0.97);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+}
+
+.modal.animate .modal__content {
+    animation: ostapSlideUp 0.24s var(--ostap-ease) both !important;
+}
+
+.selectbox.animate .selectbox__content,
+.settings.animate .settings__content {
+    animation: ostapSlideUp 0.24s var(--ostap-ease) both !important;
+}
+
+.activity:not(.activity--load) .activity__body {
+    animation: ostapCinemaFadeIn 0.24s var(--ostap-ease) both !important;
+}
+
+
+
+/* ==========================================================================
+   18. ПАНЕЛЬ ПЛЕЕРА OSTAP TV: КНОПКА ВЫБОРА ОЗВУЧКИ СПРАВА ОТ СЛЕДУЮЩЕЙ СЕРИИ
+   ========================================================================== */
+
+.player-panel__center {
+    width: 35% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 0.7em !important;
+}
+
+.player-panel__left, .player-panel__right {
+    width: 32.5% !important;
+}
+
+/* Кнопка выбора озвучки / аудиодорожки */
+.player-panel__tracks {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-radius: 100% !important;
+    transition: transform 0.18s var(--ostap-ease), background 0.18s ease-out, box-shadow 0.18s var(--ostap-ease) !important;
+}
+
+.player-panel__tracks svg {
+    fill: #ffffff !important;
+    stroke: #ffffff !important;
+    color: #ffffff !important;
+    width: 1.4em !important;
+    height: 1.4em !important;
+    transition: fill 0.18s ease-out, stroke 0.18s ease-out, color 0.18s ease-out !important;
+}
+
+.player-panel__tracks.focus {
+    background: var(--ostap-gold-gradient) !important;
+    box-shadow: 0 0 25px var(--ostap-gold-glow), 0 4px 15px rgba(0, 0, 0, 0.7) !important;
+    transform: scale3d(1.12, 1.12, 1) !important;
+}
+
+.player-panel__tracks.focus svg {
+    fill: #090A0D !important;
+    stroke: #090A0D !important;
+    color: #090A0D !important;
+}
+
+.player-panel__tracks:active {
+    transform: scale3d(0.94, 0.94, 1) !important;
+    transition: transform 0.08s ease-out !important;
+}

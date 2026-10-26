@@ -233,7 +233,7 @@ export default {
     torent_nohash_do_one: 'Праверце ці правільна вы наладзілі Jackett',
     torent_nohash_do_two: 'Прыватныя крыніцы могуць не выдаваць спасылку на файл',
     torent_nohash_do_three: 'Пераканайцеся, што Jackett таксама можа спампаваць файл',
-    torent_nohash_do_four: 'Напісаць у нашу тэлеграм групу: @lampa_group',
+    torent_nohash_do_four: 'Напісаць у нашу тэлеграм групу: @ostaptv_group',
     torent_nohash_do_five: 'Пакажыце які фільм, якая раздача і па магчымасці фота гэтай раздачы',
 
     torrent_error_text: 'Немагчыма падлучыцца да TorrServer. Давайце хутка пройдземся па спісе магчымых праблем і ўсё праверым.',
@@ -249,7 +249,7 @@ export default {
     torrent_error_info_4: 'Частая з\'ява, антывірус ці брандмаўэр можа блакаваць доступ па IP-адрасу, паспрабуйце адключыць антывірус і брандмаўэр.',
     torrent_error_info_5: 'На любой іншай прыладзе ў гэтай жа сетцы, адкрыйце ў браўзэры адрас {ip} і праверце, ці даступны вэб-інтэрфейс TorrServer.',
     torrent_error_info_6: 'Калі пасля ўсіх праверак усё роўна ўзнікае памылка падлучэння, паспрабуйце перазагрузіць TorrServer і інтэрнэт-адаптар.',
-    torrent_error_info_7: 'Калі праблема не ўхіленая, пішыце ў Telegram-групу @lampa_group з тэкстам (Lampa не падлучаецца да TorrServer пасля ўсіх праверак, бягучы адрас {ip})',
+    torrent_error_info_7: 'Калі праблема не ўхіленая, пішыце ў Telegram-групу @ostaptv_group з тэкстам (Lampa не падлучаецца да TorrServer пасля ўсіх праверак, бягучы адрас {ip})',
     torrent_error_start: 'Пачаць праверку',
     torrent_error_nomatrix: 'Не атрымалася пацвердзіць версію Matrix',
     torrent_error_made: 'Выканана',
@@ -709,7 +709,7 @@ export default {
     menu_multtv: 'Мультсерыялы',
     menu_feed: 'Стужка',
     lampa_movie_title: 'Лямпавае кіно',
-    lampa_movie_descr: 'Сачыце за навінкамі на сваім смартфоне. <br>Тэлеграм: <b>@lampa_movie</b>',
+    lampa_movie_descr: 'Сачыце за навінкамі на сваім смартфоне. <br>Тэлеграм: <b>@ostaptv_group</b>',
 
     plugins_catalog_work: 'Працаздольныя плагіны',
     plugins_catalog_work_descr: 'Плагіны, якія сапраўды працуюць у лямпе.',
@@ -1101,9 +1101,9 @@ export default {
 
     settings_rest_protocol_use: 'Бяспечнае злучэнне',
     settings_rest_protocol_descr: 'Выкарыстоўваць пратакол HTTPS',
-    install_app_apk_title: 'Як усталяваць Lampa на Android', 
-    install_app_apk_text: 'Мы заўважылі, што для запуску Lampa на Android вы карыстаецеся MediaStationX. Мы рэкамендуем вам усталяваць Lampa у выглядзе APK-прыкладанні. Гэта забяспечыць больш стабільную працу і доступ да ўсіх функцый прыкладання. <br><br>Перайдзіце ў групу <span class="account-modal__site">@lampa_group</span> у Тэлеграме, каб спампаваць апошнюю версію APK і інструкцыі па ўстаноўцы.', 
-    install_app_apk_qr: 'Адскануйце QR-код, каб спампаваць Lampa APK', 
+    install_app_apk_title: 'Як усталяваць OSTAP TV на Android', 
+    install_app_apk_text: 'Мы заўважылі, што для запуску OSTAP TV на Android вы карыстаецеся MediaStationX. Мы рэкамендуем вам усталяваць OSTAP TV у выглядзе APK-прыкладанні. Гэта забяспечыць больш стабільную працу і доступ да ўсіх функцый прыкладання. <br><br>Перайдзіце ў групу <span class="account-modal__site">@ostaptv_group</span> у Тэлеграме, каб спампаваць апошнюю версію APK і інструкцыі па ўстаноўцы.', 
+    install_app_apk_qr: 'Адскануйце QR-код, каб спампаваць OSTAP TV APK', 
     copy_link_buffer: 'Скапіяваць спасылку',
 
     tv_status_returning_series: 'Працягваецца',

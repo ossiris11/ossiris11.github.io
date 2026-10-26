@@ -303,7 +303,7 @@ export default {
     torent_nohash_do_one: 'Comprueba que has configurado Jackett correctamente',
     torent_nohash_do_two: 'Las fuentes privadas pueden no dar un enlace al archivo',
     torent_nohash_do_three: 'Asegúrate de que Jackett también puede descargar el archivo',
-    torent_nohash_do_four: 'Escribe a nuestro grupo de Telegram: @lampa_group',
+    torent_nohash_do_four: 'Escribe a nuestro grupo de Telegram: @ostaptv_group',
     torent_nohash_do_five: 'Indica qué película, qué distribución y, si es posible, una foto de esa distribución',
 
     torrent_error_text: 'No se pudo conectar a TorrServer. Repasemos rápidamente la lista de posibles problemas y comprobemos todo.',
@@ -319,7 +319,7 @@ export default {
     torrent_error_info_4: 'Es frecuente que el antivirus o el cortafuegos bloqueen el acceso por dirección IP; prueba a desactivarlos.',
     torrent_error_info_5: 'En cualquier otro dispositivo de la misma red, abre la dirección {ip} en un navegador y comprueba si está disponible la interfaz web de TorrServer.',
     torrent_error_info_6: 'Si tras todas las comprobaciones sigue habiendo un error de conexión, prueba a reiniciar TorrServer y el adaptador de red.',
-    torrent_error_info_7: 'Si el problema continúa, escribe al grupo de Telegram @lampa_group con el texto (Lampa no se conecta a TorrServer tras todas las comprobaciones, la dirección actual es {ip})',
+    torrent_error_info_7: 'Si el problema continúa, escribe al grupo de Telegram @ostaptv_group con el texto (Lampa no se conecta a TorrServer tras todas las comprobaciones, la dirección actual es {ip})',
     torrent_error_start: 'Iniciar comprobación',
     torrent_error_nomatrix: 'No se pudo comprobar la versión Matrix',
     torrent_error_made: 'Completado',
@@ -872,7 +872,7 @@ export default {
     menu_feed: 'Novedades',
 
     lampa_movie_title: 'Cine Lampa',
-    lampa_movie_descr: 'Sigue las novedades en tu smartphone. <br>Telegram: <b>@lampa_movie</b>',
+    lampa_movie_descr: 'Sigue las novedades en tu smartphone. <br>Telegram: <b>@ostaptv_group</b>',
 
     plugins_catalog_work: 'Complementos que funcionan',
     plugins_catalog_work_descr: 'Complementos que funcionan con seguridad en Lampa.',
@@ -1291,8 +1291,8 @@ export default {
     termsofuse_t_12: 'Si detectas alguna infracción de derechos de autor en la aplicación Lampa, ponte en contacto con sus desarrolladores a través de los contactos indicados en la aplicación. No obstante, ten en cuenta que la aplicación Lampa utiliza la API del catálogo themoviedb.org, que ofrece acceso abierto a información sobre películas y series. Esto significa que la información mostrada en Lampa es pública y no infringe derechos de autor.',
     termsofuse_t_13: 'Si crees que la aplicación Lampa aún contiene contenido que infringe tus derechos de autor, puedes contactar con el titular de ese contenido y solicitar su retirada del sitio themoviedb.org. A su vez, la aplicación Lampa puede retirar contenido al recibir una notificación de infracción de derechos de autor adecuada.',
 
-    install_app_apk_title: 'Cómo instalar Lampa en Android',
-    install_app_apk_text: 'Hemos detectado que usas MediaStationX para ejecutar Lampa en Android. Te recomendamos instalar Lampa como aplicación APK. Así funcionará de forma más estable y tendrás acceso a todas sus funciones. <br><br>Ve al grupo de Telegram <span class="account-modal__site">@lampa_group</span> para descargar el APK más reciente y las instrucciones de instalación.',
+    install_app_apk_title: 'Cómo instalar OSTAP TV en Android',
+    install_app_apk_text: 'Hemos detectado que usas MediaStationX para ejecutar OSTAP TV en Android. Te recomendamos instalar OSTAP TV como aplicación APK. Así funcionará de forma más estable y tendrás acceso a todas sus funciones. <br><br>Ve al grupo de Telegram <span class="account-modal__site">@ostaptv_group</span> para descargar el APK más reciente y las instrucciones de instalación.',
     install_app_apk_qr: 'Escanea el código QR para descargar el APK de Lampa',
 
     ad: 'Publicidad',
