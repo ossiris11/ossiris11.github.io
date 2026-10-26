@@ -1226,9 +1226,86 @@ body:not(.system--keyboard) .search__keypad .simple-keyboard {
     animation: ostapSlideUp 0.24s var(--ostap-ease) both !important;
 }
 
-.selectbox.animate .selectbox__content,
-.settings.animate .settings__content {
-    animation: ostapSlideUp 0.24s var(--ostap-ease) both !important;
+/* ==========================================================================
+   OSTAP TV: БОКОВЫЕ ПАНЕЛИ (ВЫБОР ДОРОЖЕК, НАСТРОЙКИ) - 100% ВИДИМОСТЬ
+   ========================================================================== */
+.selectbox {
+    z-index: 10005 !important;
+}
+
+.selectbox__layer {
+    z-index: 10005 !important;
+    background: rgba(0, 0, 0, 0.6) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+}
+
+.selectbox__content {
+    z-index: 10006 !important;
+    background: rgba(14, 16, 22, 0.96) !important;
+    border-left: 1.5px solid rgba(212, 175, 55, 0.3) !important;
+    box-shadow: -15px 0 45px rgba(0, 0, 0, 0.9), -2px 0 15px rgba(212, 175, 55, 0.15) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+}
+
+.selectbox__title {
+    color: var(--ostap-gold-light, #F9E79F) !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.03em !important;
+}
+
+.selectbox-item {
+    border-radius: 10px !important;
+    margin: 0.3em 0.8em !important;
+    transition: transform 0.16s var(--ostap-ease), background 0.16s ease-out !important;
+}
+
+.selectbox-item.selected:not(.nomark)::after,
+.selectbox-item.picked::after {
+    border-color: var(--ostap-gold, #D4AF37) !important;
+}
+
+.selectbox-item.focus {
+    background: var(--ostap-gold-gradient, linear-gradient(135deg, #ECC870 0%, #D4AF37 50%, #AA820A 100%)) !important;
+    color: #090A0D !important;
+    outline: none !important;
+    box-shadow: 0 4px 18px rgba(212, 175, 55, 0.35) !important;
+}
+
+.selectbox-item.focus .selectbox-item__title,
+.selectbox-item.focus .selectbox-item__subtitle {
+    color: #090A0D !important;
+}
+
+.selectbox-item.focus::after {
+    border-color: #090A0D !important;
+}
+
+@media screen and (min-width: 481px) {
+    body.selectbox--open .selectbox__content {
+        transform: translate3d(-100%, 0, 0) !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    body.settings--open .settings__content {
+        transform: translate3d(-100%, 0, 0) !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body.selectbox--open .selectbox__content {
+        transform: translate3d(0, 0, 0) !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    body.settings--open .settings__content {
+        transform: translate3d(0, 0, 0) !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
 }
 
 .activity:not(.activity--load) .activity__body {
