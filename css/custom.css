@@ -65,8 +65,8 @@ body, html {
 /* 3. ВЕРХНЯЯ НАВИГАЦИОННАЯ ПАНЕЛЬ (HEADER) */
 .head {
     background: linear-gradient(180deg, rgba(9, 10, 13, 0.95) 0%, rgba(9, 10, 13, 0.6) 75%, transparent 100%) !important;
-    backdrop-filter: blur(20px) !important;
-    -webkit-backdrop-filter: blur(20px) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
     border-bottom: 1px solid rgba(216, 180, 106, 0.1) !important;
     padding-top: 0.6em;
     padding-bottom: 0.6em;
@@ -112,8 +112,8 @@ body, html {
 .menu {
     background-color: rgba(9, 10, 13, 0.97) !important;
     border-right: 1px solid rgba(216, 180, 106, 0.15) !important;
-    backdrop-filter: blur(25px) !important;
-    -webkit-backdrop-filter: blur(25px) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
 }
 
 .menu__item {
@@ -511,8 +511,8 @@ body, html {
     background: rgba(23, 26, 32, 0.85) !important;
     border: 1px solid rgba(216, 180, 106, 0.25) !important;
     border-radius: 50px !important;
-    backdrop-filter: blur(12px) !important;
-    -webkit-backdrop-filter: blur(12px) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
     transition: opacity 0.2s ease-out, transform 0.2s var(--ostap-ease), border-color 0.2s ease-out, box-shadow 0.2s var(--ostap-ease) !important;
 }
 
@@ -694,8 +694,8 @@ body:not(.system--keyboard) .search__keypad .simple-keyboard {
     max-width: 820px !important;
     width: 95% !important;
     background: rgba(19, 21, 27, 0.85) !important;
-    backdrop-filter: blur(16px) !important;
-    -webkit-backdrop-filter: blur(16px) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
     border: 1px solid rgba(216, 180, 106, 0.25) !important;
     border-radius: 18px !important;
     padding: 1.2em !important;
@@ -899,8 +899,8 @@ body:not(.system--keyboard) .search__keypad .simple-keyboard {
     min-width: 200px !important;
     max-width: 270px !important;
     background: rgba(23, 26, 32, 0.88) !important;
-    backdrop-filter: blur(16px) !important;
-    -webkit-backdrop-filter: blur(16px) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
     border: 1.5px solid rgba(216, 180, 106, 0.3) !important;
     border-radius: 16px !important;
     padding: 0.9em 1.2em !important;
@@ -1097,8 +1097,8 @@ body:not(.system--keyboard) .search__keypad .simple-keyboard {
 /* Премиальные тултипы для кнопок плеера */
 .player-panel .button .tooltip {
     background: rgba(15, 17, 23, 0.95) !important;
-    backdrop-filter: blur(12px) !important;
-    -webkit-backdrop-filter: blur(12px) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
     border: 1px solid rgba(216, 180, 106, 0.3) !important;
     border-radius: 0.6em !important;
     color: #F5F5F3 !important;
@@ -1118,8 +1118,8 @@ body:not(.system--keyboard) .search__keypad .simple-keyboard {
     background: radial-gradient(circle at 75% 25%, rgba(216, 180, 106, 0.08) 0%, rgba(9, 10, 13, 0.75) 55%, #090A0D 100%) !important;
     border: 1px solid rgba(216, 180, 106, 0.15) !important;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9) !important;
-    backdrop-filter: blur(20px) !important;
-    -webkit-backdrop-filter: blur(20px) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
     animation: ostapCinemaFadeIn 0.28s var(--ostap-ease) both !important;
 }
 
@@ -1186,8 +1186,8 @@ body:not(.system--keyboard) .search__keypad .simple-keyboard {
 /* Выпадающие меню выбора статуса и оценки */
 .shikimori-local__dropdown {
     background: rgba(18, 20, 26, 0.96) !important;
-    backdrop-filter: blur(25px) !important;
-    -webkit-backdrop-filter: blur(25px) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
     border: 1.5px solid rgba(216, 180, 106, 0.3) !important;
     border-radius: 16px !important;
     box-shadow: 0 16px 50px rgba(0, 0, 0, 0.95), 0 0 30px rgba(216, 180, 106, 0.18) !important;
@@ -1287,4 +1287,34 @@ body:not(.system--keyboard) .search__keypad .simple-keyboard {
 .player-panel__tracks:active {
     transform: scale3d(0.94, 0.94, 1) !important;
     transition: transform 0.08s ease-out !important;
+}
+
+/* ==========================================================================
+   18. SMART TV HARDWARE ACCELERATION & ZERO-JANK RENDERING (60 FPS ENGINE)
+   ========================================================================== */
+.card, .items-cards, .scroll__content, .menu__item, .button, .selectbox-item, .head__action {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.scroll__body {
+    will-change: transform;
+}
+
+/* Скрытие ненужных элементов на уровне CSS движка (0 мс CPU) */
+.feed-head,
+[data-section="diagnostics"],
+.shikimori-local__section[data-section="diagnostics"],
+.diagnostics-page,
+.head__action.open--broadcast,
+.head__action.notice--icon,
+.open--broadcast,
+.notice--icon,
+.open--profile,
+.search__sources,
+.search-source,
+[data-area="sources"] {
+    display: none !important;
 }

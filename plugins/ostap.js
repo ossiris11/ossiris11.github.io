@@ -441,7 +441,13 @@
             Lampa.Storage.set('parser_use_link', 'one');
             Lampa.Storage.set('torrents_sort', 'Seeders');
             Lampa.Storage.set('parse_lang', 'lg');
-            Lampa.Storage.set('parse_timeout', '10');
+            // High Performance Smart TV engine settings
+            Lampa.Storage.set('hide_outside_the_screen', true);
+            Lampa.Storage.set('poster_size', 'w300');
+            Lampa.Storage.set('advanced_animation', false);
+            Lampa.Storage.set('animation', true);
+            Lampa.Storage.set('card_interfice_cover', true);
+            Lampa.Storage.set('cache_images', false);
         }
 
         // Remove CUB profile icon from header
@@ -460,31 +466,12 @@
         // Initial promo and sources cleanup
         removePromos();
 
-        // Efficient DOM observer instead of heavy polling intervals (zero idle CPU usage)
-        if (window.MutationObserver) {
-            var promoDebounce = null;
-            var promoObserver = new MutationObserver(function () {
-                if (promoDebounce) return;
-                promoDebounce = setTimeout(function () {
-                    promoDebounce = null;
-                    removePromos();
-                    setupHeaderTitle();
-                }, 120);
-            });
-            promoObserver.observe(document.body, { childList: true, subtree: true });
-        } else {
-            setInterval(function () {
-                removePromos();
-                setupHeaderTitle();
-            }, 1000);
-        }
-
         // Reorder menu items cleanly
         reorderMenu();
         var menuInterval = setInterval(reorderMenu, 300);
         setTimeout(function () {
             clearInterval(menuInterval);
-        }, 3000);
+        }, 1500);
 
         if (window.Lampa && Lampa.Listener) {
             Lampa.Listener.follow('activity', function (e) {
