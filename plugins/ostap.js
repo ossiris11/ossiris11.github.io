@@ -429,15 +429,19 @@
             // Configure TorrServer & Torrents (Dedicated Cloud VPS + Jackett Aggregator)
             Lampa.Storage.set('torrents_use', true);
             Lampa.Storage.set('torrserver_url', 'http://2.26.103.102:8090');
+            Lampa.Storage.set('torrserver_url_two', 'http://2.26.103.102/torrserver');
             Lampa.Storage.set('torrserver_use_link', 'one');
             Lampa.Storage.set('torrserver_preload', true);
             Lampa.Storage.set('parser_use', true);
             Lampa.Storage.set('parser_torrent_type', 'jackett');
-            Lampa.Storage.set('jackett_url', 'http://2.26.103.102:8088/jackett');
+            Lampa.Storage.set('jackett_url', 'http://2.26.103.102/jackett');
+            Lampa.Storage.set('jackett_url_two', 'http://2.26.103.102:8088/jackett');
             Lampa.Storage.set('jackett_key', '4m12a0z79pebk534e3hepazpdjyc6gm3');
+            Lampa.Storage.set('jackett_key_two', '4m12a0z79pebk534e3hepazpdjyc6gm3');
             Lampa.Storage.set('parser_use_link', 'one');
             Lampa.Storage.set('torrents_sort', 'Seeders');
             Lampa.Storage.set('parse_lang', 'lg');
+            Lampa.Storage.set('parse_timeout', '10');
         }
 
         // Remove CUB profile icon from header
