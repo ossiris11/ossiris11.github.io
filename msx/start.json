@@ -1,6 +1,6 @@
 {
 	"name": "Ostap-TV",
 	"version": "latest",
-	"parameter": "content:{PREFIX}{domain}/msx/start.json",
-	"action": "link:{PREFIX}{domain}"
+	"parameter": "content:https://ossiris11.github.io/msx/start.json",
+	"action": "link:https://ossiris11.github.io"
 }
