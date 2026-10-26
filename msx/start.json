@@ -1,6 +1,6 @@
 {
-	"name": "Ostap-TV",
-	"version": "latest",
-	"parameter": "content:{PREFIX}{domain}/msx/start.json",
-	"action": "link:{PREFIX}{domain}"
+  "name": "Ostap-TV",
+  "version": "latest",
+  "parameter": "content:http://2.26.103.102/msx/start.json",
+  "action": "link:http://2.26.103.102"
 }
